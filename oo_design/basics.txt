@@ -1,0 +1,81 @@
+What is the difference between an abstract class and an interface? 
+
+link: https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-java/
+
+When to use "this" keyword in Java (link: https://stackoverflow.com/questions/2411270/when-should-i-use-this-in-a-class):
+1. To disambiguate variable references (parameter in constructor has the same
+name as the field of the object that's being instantiated)
+2. As an argument to pass to another object.
+3. To call alternate constructors. Ex:
+class Foo
+{
+    public Foo() {
+        this("Some default value for bar");
+
+        //optional other lines
+    }
+
+    public Foo(String bar) {
+        // Do something with bar
+    }
+}
+
+
+Overriding is when you implement a method that the superclass already has.
+Extending is when you implement a method in a subclass that a superclass doesn't
+already have.
+
+Creating subclasses is called inheritance when it inherits the fields and
+methods of the superclass.
+
+Fields are made private in a class, but public methods will be included in the
+class to give an encapsulated way to change these attributes.
+Changing attributes is done only through setter methods because we may want to
+verify values that are set. Example, setting a Dog object's age as -2 is not
+allowed, so we get around this by including verifying logic in the class. This
+is so that we can protect the data.
+
+Parameters vs arguments:
+say you're in the main method and you're changing the age of the Dog instance:
+doggy.setAge(10);
+in this case, 10 is an ARGUMENT
+but now let's say that we're writing the setter method in that Dog class,
+setAge(int newAge){ }
+in this case, newAge is a PARAMETER
+
+Fields (Instance variable): declared in classes and belongs to classes.
+Ex: private int weight;
+Local variable: created inside of methods. Ex: a conversion ratio used in a
+method
+
+Remember the is a / has a principles for seeing if a certain class is a suitable
+subclass for a superclass.
+Is a:
+Ex: Is a dog an animal? Yes. Suitable superclass.
+Ex: Is a dog a cat? No. Not suitable superclass.
+
+
+Why use inheritance?
+- Avoid duplicate code
+- Changes to superclass code is immediately reflected in the subclasses
+- We know that all subclasses have all the methods of the superclass.
+
+to inherit, use the extends keyword when declaring the class.
+Ex: public class Dog extends Animal
+
+Constructors look like this: public Dog() {}
+if you want to call the superclass's constructor in the subclass constructor,
+use super();
+However, you don't need super() in order to call setters in the parent class.
+They will be readily available to you.
+
+Also, in java, primitive types are passed by value and Objects are passed by
+reference.
+
+Static means that all members of the class share it. For example if the dog
+class had a static int called population, if it's updated for one class, it's
+updated for all classes.
+So, lets say your Animal class constructor increments a static int called population.
+If you instantiate 2 Animal classes and 1 Dog class (which extends animal),
+population will come out to 3, even if you don't use super(); in the Dog
+constructor.
