@@ -5,10 +5,10 @@
   Merge sort is a sorting algorithm that works by
 
   How does it work?
-  
+
 
   Performance:
-
+  average and worst case of O(n log n).
 
 */
 

@@ -9,6 +9,12 @@
   benefits are that one can find data by calculating an index rather than
   searching, which is what makes hash tables so fast.
 
+  .       Average`    Worst-case
+  Space:  O(n)        O(n)
+  Search: O(1)        O(n)
+  Insert: O(1)        O(n)
+  Delete: O(1)        O(n)
+
 
 
 */

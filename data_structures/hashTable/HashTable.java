@@ -58,8 +58,7 @@ public class HashTable {
 					System.out.print("|      ");
 
 				else
-					System.out
-							.print(String.format("| %3s " + " ", data[n]));
+					System.out.print(String.format("| %3s " + " ", data[n]));
 
 			}
 
