@@ -48,7 +48,7 @@ public class SymmetricTree {
   }
 
   public static void main(String[] args){
-    // TODO implement the actual testing for this solution above
+    // TODO implement the driver method for the implementation above
   }
 
 };

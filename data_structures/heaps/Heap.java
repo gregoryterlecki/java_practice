@@ -1,3 +1,10 @@
+/*
+  HEAPS
+
+  What is a heap?
+  A heap is a tree-like data structure
+*/
+
 import java.util.Arrays;
 
 public class Heap {
@@ -60,7 +67,6 @@ public class Heap {
       swap(parentIndex(index), index);
       index = getParentIndex(index);
     }
-
   }
 
   public void heapifyDown(){
@@ -70,7 +76,7 @@ public class Heap {
     // it can't have a right child.
     while(hasLeftChild(index)){
       int smallerChildIndex = getLeftChildIndex(index);
-      if(hasRightChild && leftChild(index) < rightChild(index)){
+      if(hasRightChild(index) && rightChild(index) < leftChild(index)){
         smallerChildIndex = getRightChildIndex(index);
       }
       if(items[index] < items[smallerChildIndex]){

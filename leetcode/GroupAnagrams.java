@@ -20,8 +20,6 @@ Hints:
    If it is not yet a key, add it. Regardless of this, you will be adding the
    current string to the list of strings, which is a value under the given key
    of the hashmap.
-
-Java tips:
   
 */
 
